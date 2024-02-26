@@ -48,7 +48,6 @@ public static class Dijkstra
             Console.WriteLine($"Vertex: {vertex} - Last Updating By Vertex: {vertextLastUpdateBy}");
         }
 
-
         Console.WriteLine("\nPrinting the path");
         Console.Write(destinationVertex);
 
@@ -61,6 +60,7 @@ public static class Dijkstra
     }
 
     // Finding the minimum distance vertex
+    //To find the vertex with Min Distance from source vertex would be better use a Min Heap Data structure and extract the min node from the distance heap data structure
     private static int FindMinDistanceVertex(int[] distance, bool[] visitedVertex)
     {
         var currentMinDistance = int.MaxValue;
