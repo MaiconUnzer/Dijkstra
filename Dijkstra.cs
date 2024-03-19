@@ -16,14 +16,14 @@ public static class Dijkstra
             lastUpdatedBy[vertex] = null;
         }
 
-        for (int vertex = 0; vertex < vertexCount; vertex++)
+        for (int vertex = 0; vertex < vertexCount; vertex++)//O(V)
         {
             var minDistanceVertex = FindMinDistanceVertex(distance, visitedVertex);
 
             visitedVertex[minDistanceVertex] = true;
 
             // Update the distance between neighbouring vertex and source vertex
-            for (int neighborVertex = 0; neighborVertex < vertexCount; neighborVertex++)
+            for (int neighborVertex = 0; neighborVertex < vertexCount; neighborVertex++)//O(V)
             {
                 var newDistanceLength = distance[minDistanceVertex] + graph[minDistanceVertex][neighborVertex];
                 var vertexNotVisited = !visitedVertex[neighborVertex];
